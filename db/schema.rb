@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208002807) do
+ActiveRecord::Schema.define(version: 20141210131207) do
 
   create_table "authors", force: true do |t|
     t.string   "author_fname"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20141208002807) do
     t.string   "entry_title"
     t.string   "entry_topic"
     t.date     "entry_submission_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "entry_authors", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "entry_references", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
